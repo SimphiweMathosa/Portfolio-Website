@@ -1,14 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
 :root {
-  --primary-color: #fe214f;
+  --primary-color: #514e4e;
   --primary-color-dark: #d4133a;
-  --secondary-color: #0b1423;
-  --secondary-color-dark: #091121;
+  --secondary-color: #92826e;
+  --secondary-color-dark: #94866d;
   --text-light: #cbd5e1;
   --white: #ffffff;
   --max-width: 1200px;
-}
+} 
 
 * {
   padding: 0;
@@ -162,13 +162,29 @@ nav {
 
 .header {
   background-image: linear-gradient(
-      rgba(11, 20, 35, 0.8),
-      rgba(11, 20, 35, 0.8)
+      rgba(144, 133, 107, 0.233),
+      rgba(0, 0, 0, 0.086)
     ),
     url("assets/header.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  overflow: hidden;  
+}
+
+/* Blurred edges overlay */
+.header::before {
+  content: "";
+  position: absolute;
+  top: -20px; /* Extend outside to create blur space */
+  left: -20px;
+  right: -20px;
+  bottom: -10px;
+  background-image: inherit;
+  background-size: cover;
+  background-position: center;
+  filter: blur(20px);
+  z-index: -1;
 }
 
 .header__container {
