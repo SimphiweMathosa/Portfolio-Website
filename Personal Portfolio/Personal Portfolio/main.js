@@ -14,13 +14,13 @@ navLinks.addEventListener("click", (e) => {
   menuBtnIcon.setAttribute("class", "ri-menu-line");
 });
 
-const downloadCv = document.getElementById("download-cv");
-
-downloadCv.addEventListener("click", (e) => {
-  const aElement = document.createElement("a");
-  aElement.setAttribute("download", "CV.pdf");
-  aElement.setAttribute("href", "/assets/CV.pdf");
-  aElement.click();
+document.getElementById("download-cv").addEventListener("click", function () {
+  const link = document.createElement("a");
+  link.href = "assets/CV.pdf"; // Path to your CV
+  link.download = "CV.pdf"; // Suggested filename
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
 });
 
 const scrollRevealOption = {
