@@ -290,7 +290,7 @@ nav {
 }
 
 .service__container .section__header::before {
-  content: "Service";
+  content: "Skills & Tools";
 }
 
 .service__container .section__description {
@@ -521,7 +521,7 @@ nav {
 }
 
 .blog__container .section__header::before {
-  content: "Blog";
+  content: "Projects";
 }
 
 .blog__grid {
@@ -577,7 +577,7 @@ nav {
 }
 
 .footer__container .section__header::before {
-  content: "Contact Us";
+  content: "Contact Me";
   left: 50%;
   transform: translateX(-50%);
 }
